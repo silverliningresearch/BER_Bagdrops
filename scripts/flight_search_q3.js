@@ -88,10 +88,9 @@ function select_flight_q3() {
       flightDestinationValue = currentFlight.Airport_name + " (" + currentFlight.Airport_code  + ")";
       api.fn.answers({flightDestination: flightDestinationValue});
 
-      api.fn.answers({Core_Q3_ext:  selectedFlight});
-      api.fn.answers({urlVar15:  currentFlight.Airline });
-      api.fn.answers({urlVar16:  flightDestinationValue });
-      api.fn.answers({urlVar17:  currentFlight.Flight });
+      api.fn.answers({urlVar20:  selectedFlight});
+      api.fn.answers({urlVar19:  currentFlight.Airline });
+      api.fn.answers({FlightNumber:  currentFlight.Flight });
       found = true;
       $('.rt-btn.rt-btn-next').show(); 
       break;
