@@ -48,18 +48,18 @@
           const googleMapsHandler = () => {
             console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
 
-            var Flight_Tag = $("section:contains('What is your flight number today?###')")
-            if ((Flight_Tag.length === 1)) {
-              showFlightCodeSection_q3();
-            } else {
-              hideFlightCodeSection_q3();
-            }
-
-            // if (api.fn.getCurrentPageIndex() === 2) { //Flight departure
-            //   showFlightCodeSection_q3() ;
+            // var Flight_Tag = $("section:contains('What is your flight number today?###')")
+            // if ((Flight_Tag.length === 1)) {
+            //   showFlightCodeSection_q3();
             // } else {
             //   hideFlightCodeSection_q3();
             // }
+
+            if (api.fn.getCurrentPageIndex() === 1) { //Flight departure
+              showFlightCodeSection_q3() ;
+            } else {
+              hideFlightCodeSection_q3();
+            }
           };
 
           api.events.subscribe('next', googleMapsHandler);
